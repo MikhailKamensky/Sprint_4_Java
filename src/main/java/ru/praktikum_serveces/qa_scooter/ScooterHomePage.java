@@ -8,33 +8,33 @@ public class ScooterHomePage {
 
     private WebDriver driver;
 
-    public final String answerText0 = "Сутки — 400 рублей. Оплата курьеру — наличными или картой.";
-    public final String answerText1 = "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.";
-    public final String answerText2 = "Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.";
-    public final String answerText3 = "Только начиная с завтрашнего дня. Но скоро станем расторопнее.";
-    public final String answerText4 = "Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.";
-    public final String answerText5 = "Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.";
-    public final String answerText6 = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.";
-    public final String answerText7 = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";
+    public final String answerPrice = "Сутки — 400 рублей. Оплата курьеру — наличными или картой.";
+    public final String answerFewScootersRent = "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.";
+    public final String answerRentTime = "Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.";
+    public final String answerTodayRent = "Только начиная с завтрашнего дня. Но скоро станем расторопнее.";
+    public final String answerRentExtension = "Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.";
+    public final String answerScooterCharge = "Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.";
+    public final String answerOrderCancel = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.";
+    public final String answerOuterOrder = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";
 
 
-    private By accordionPanel0 = By.xpath(".//div[@class='accordion']/div[1]");
-    private By accordionPanel1 = By.xpath(".//div[@class='accordion']/div[2]");
-    private By accordionPanel2 = By.xpath(".//div[@class='accordion']/div[3]");
-    private By accordionPanel3 = By.xpath(".//div[@class='accordion']/div[4]");
-    private By accordionPanel4 = By.xpath(".//div[@class='accordion']/div[5]");
-    private By accordionPanel5 = By.xpath(".//div[@class='accordion']/div[6]");
-    private By accordionPanel6 = By.xpath(".//div[@class='accordion']/div[7]");
-    private By accordionPanel7 = By.xpath(".//div[@class='accordion']/div[8]");
+    private By priceQestionPanel = By.xpath(".//div[@class='accordion']/div[1]");
+    private By FewScootersRentPanel = By.xpath(".//div[@class='accordion']/div[2]");
+    private By RentTimePanel = By.xpath(".//div[@class='accordion']/div[3]");
+    private By TodayRentPanel = By.xpath(".//div[@class='accordion']/div[4]");
+    private By RentExtensionPanel = By.xpath(".//div[@class='accordion']/div[5]");
+    private By ScooterChargePanel = By.xpath(".//div[@class='accordion']/div[6]");
+    private By OrderCancelPanel = By.xpath(".//div[@class='accordion']/div[7]");
+    private By OuterOrderPanel = By.xpath(".//div[@class='accordion']/div[8]");
 
-    private By accordionText0 = By.xpath(".//p[text() = '"+ answerText0 +"']");
-    private By accordionText1 = By.xpath(".//p[text() = '"+ answerText1 +"']");
-    private By accordionText2 = By.xpath(".//p[text() = '" + answerText2 + "']");
-    private By accordionText3 = By.xpath(".//p[text() = '"+ answerText3 +"']");
-    private By accordionText4 = By.xpath(".//p[text() = '"+ answerText4 +"']");
-    private By accordionText5 = By.xpath(".//p[text() = '"+ answerText5 +"']");
-    private By accordionText6 = By.xpath(".//p[text() = '"+ answerText6 +"']");
-    private By accordionText7 = By.xpath(".//p[text() = '"+ answerText7 +"']");
+    private By answerPriceText = By.xpath(".//p[text() = '"+ answerPrice +"']");
+    private By answerFewScootersRentText = By.xpath(".//p[text() = '"+ answerFewScootersRent +"']");
+    private By answerRentTimeText = By.xpath(".//p[text() = '" + answerRentTime + "']");
+    private By TodayRentText = By.xpath(".//p[text() = '"+ answerTodayRent +"']");
+    private By answerRentExtensionText = By.xpath(".//p[text() = '"+ answerRentExtension +"']");
+    private By answerScooterChargeText = By.xpath(".//p[text() = '"+ answerScooterCharge +"']");
+    private By answerOrderCancelText = By.xpath(".//p[text() = '"+ answerOrderCancel +"']");
+    private By answerOuterOrderText = By.xpath(".//p[text() = '"+ answerOuterOrder +"']");
 
     // локаторы кнопок "Заказать" в верхней части и в середине страницы
 
@@ -48,35 +48,35 @@ public class ScooterHomePage {
     // методы для клика по отдельным пунктам "Вопросов о главном"
 
     public void clickAccordionPanel0 () {
-        driver.findElement(accordionPanel0).click();
+        driver.findElement(priceQestionPanel).click();
     }
 
     public void clickAccordionPanel1 () {
-        driver.findElement(accordionPanel1).click();
+        driver.findElement(FewScootersRentPanel).click();
     }
 
     public void clickAccordionPanel2 () {
-        driver.findElement(accordionPanel2).click();
+        driver.findElement(RentTimePanel).click();
     }
 
     public void clickAccordionPanel3 () {
-        driver.findElement(accordionPanel3).click();
+        driver.findElement(TodayRentPanel).click();
     }
 
     public void clickAccordionPanel4 () {
-        driver.findElement(accordionPanel4).click();
+        driver.findElement(RentExtensionPanel).click();
     }
 
     public void clickAccordionPanel5 () {
-        driver.findElement(accordionPanel5).click();
+        driver.findElement(ScooterChargePanel).click();
     }
 
     public void clickAccordionPanel6 () {
-        driver.findElement(accordionPanel6).click();
+        driver.findElement(OrderCancelPanel).click();
     }
 
     public void clickAccordionPanel7 () {
-        driver.findElement(accordionPanel7).click();
+        driver.findElement(OuterOrderPanel).click();
     }
 
 
@@ -84,35 +84,35 @@ public class ScooterHomePage {
     // Методы для получения текста отдельных пунктов "Вопросов о главном"
 
     public String getAccordionPanel0Text () {
-        return driver.findElement(accordionText0).getText();
+        return driver.findElement(answerPriceText).getText();
     }
 
     public String getAccordionPanel1Text () {
-        return driver.findElement(accordionText1).getText();
+        return driver.findElement(answerFewScootersRentText).getText();
     }
 
     public String getAccordionPanel2Text () {
-        return driver.findElement(accordionText2).getText();
+        return driver.findElement(answerRentTimeText).getText();
     }
 
     public String getAccordionPanel3Text () {
-        return driver.findElement(accordionText3).getText();
+        return driver.findElement(TodayRentText).getText();
     }
 
     public String getAccordionPanel4Text () {
-        return driver.findElement(accordionText4).getText();
+        return driver.findElement(answerRentExtensionText).getText();
     }
 
     public String getAccordionPanel5Text () {
-        return driver.findElement(accordionText5).getText();
+        return driver.findElement(answerScooterChargeText).getText();
     }
 
     public String getAccordionPanel6Text () {
-        return driver.findElement(accordionText6).getText();
+        return driver.findElement(answerOrderCancelText).getText();
     }
 
     public String getAccordionPanel7Text () {
-        return driver.findElement(accordionText7).getText();
+        return driver.findElement(answerOuterOrderText).getText();
     }
 
     //методы клика по кнопкам "Заказать"

@@ -25,6 +25,7 @@ public class QuestionsHomeTests {
     public void startUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @Test
@@ -41,11 +42,11 @@ public class QuestionsHomeTests {
         objHomePage.clickAccordionPanel0();
 
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text() = '"+ objHomePage.answerText0 +"']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text() = '"+ objHomePage.answerPrice +"']")));
 
         String result = objHomePage.getAccordionPanel0Text();
 
-        MatcherAssert.assertThat(objHomePage.answerText0, is(result));
+        MatcherAssert.assertThat(objHomePage.answerPrice, is(result));
 
     }
 
@@ -63,11 +64,11 @@ public class QuestionsHomeTests {
         objHomePage.clickAccordionPanel1();
 
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text() = '"+ objHomePage.answerText1 +"']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text() = '"+ objHomePage.answerFewScootersRent +"']")));
 
         String result = objHomePage.getAccordionPanel1Text();
 
-        MatcherAssert.assertThat(objHomePage.answerText1, is(result));
+        MatcherAssert.assertThat(objHomePage.answerFewScootersRent, is(result));
 
     }
 
@@ -85,11 +86,11 @@ public class QuestionsHomeTests {
         objHomePage.clickAccordionPanel2();
 
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerText2 + "']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerRentTime + "']")));
 
         String result = objHomePage.getAccordionPanel2Text();
 
-        MatcherAssert.assertThat(objHomePage.answerText2, is(result));
+        MatcherAssert.assertThat(objHomePage.answerRentTime, is(result));
 
     }
 
@@ -107,11 +108,11 @@ public class QuestionsHomeTests {
         objHomePage.clickAccordionPanel3();
 
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerText3 + "']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerTodayRent + "']")));
 
         String result = objHomePage.getAccordionPanel3Text();
 
-        MatcherAssert.assertThat(objHomePage.answerText3, is(result));
+        MatcherAssert.assertThat(objHomePage.answerTodayRent, is(result));
 
     }
 
@@ -129,11 +130,11 @@ public class QuestionsHomeTests {
         objHomePage.clickAccordionPanel4();
 
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerText4 + "']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerRentExtension + "']")));
 
         String result = objHomePage.getAccordionPanel4Text();
 
-        MatcherAssert.assertThat(objHomePage.answerText4, is(result));
+        MatcherAssert.assertThat(objHomePage.answerRentExtension, is(result));
 
     }
 
@@ -151,11 +152,11 @@ public class QuestionsHomeTests {
         objHomePage.clickAccordionPanel5();
 
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerText5 + "']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerScooterCharge + "']")));
 
         String result = objHomePage.getAccordionPanel5Text();
 
-        MatcherAssert.assertThat(objHomePage.answerText5, is(result));
+        MatcherAssert.assertThat(objHomePage.answerScooterCharge, is(result));
 
     }
 
@@ -173,11 +174,11 @@ public class QuestionsHomeTests {
         objHomePage.clickAccordionPanel6();
 
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerText6 + "']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerOrderCancel + "']")));
 
         String result = objHomePage.getAccordionPanel6Text();
 
-        MatcherAssert.assertThat(objHomePage.answerText6, is(result));
+        MatcherAssert.assertThat(objHomePage.answerOrderCancel, is(result));
 
     }
 
@@ -195,11 +196,11 @@ public class QuestionsHomeTests {
         objHomePage.clickAccordionPanel7();
 
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerText7 + "']")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//p[text()='"+ objHomePage.answerOuterOrder + "']")));
 
         String result = objHomePage.getAccordionPanel7Text();
 
-        MatcherAssert.assertThat(objHomePage.answerText7, is(result));
+        MatcherAssert.assertThat(objHomePage.answerOuterOrder, is(result));
 
     }
 

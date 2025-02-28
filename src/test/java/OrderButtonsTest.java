@@ -1,6 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,8 +10,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.praktikum_serveces.qa_scooter.FirstOrderForm;
 import ru.praktikum_serveces.qa_scooter.ScooterHomePage;
+import ru.praktikum_serveces.rules.BrowserRules;
+
+import static org.junit.Assert.assertTrue;
 
 public class OrderButtonsTest {
+
+//    @Rule
+//    public final BrowserRules browserRule = new BrowserRules();
+
 
     private WebDriver driver;
 
@@ -18,6 +26,7 @@ public class OrderButtonsTest {
     public void startUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @Test
@@ -29,7 +38,7 @@ public class OrderButtonsTest {
         FirstOrderForm  objFirstOrderPage = new FirstOrderForm(driver);
 
         objHomePage.clickSmallOrderButton();
-        WebElement element = driver.findElement(By.className("Order_Content__bmtHS"));
+        assertTrue(objFirstOrderPage.isOrderFormDisplayed());
 
     }
 
@@ -46,7 +55,7 @@ public class OrderButtonsTest {
 
 
         objHomePage.clickSmallOrderButton();
-        WebElement element = driver.findElement(By.className("Order_Content__bmtHS"));
+        assertTrue(objFirstOrderPage.isOrderFormDisplayed());
     }
 
     @After
