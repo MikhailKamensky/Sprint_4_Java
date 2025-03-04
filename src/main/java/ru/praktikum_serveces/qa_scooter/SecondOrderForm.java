@@ -2,10 +2,7 @@ package ru.praktikum_serveces.qa_scooter;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
 public class SecondOrderForm {
     private WebDriver driver;
@@ -14,11 +11,8 @@ public class SecondOrderForm {
     //локаторы
     private By date = By.xpath(".//input[@placeholder = '* Когда привезти самокат']");
     private By rentPeriodField = By.xpath(".//div[@class='Dropdown-control']");
-//    private By rentPeriod = By.xpath(".//div[@class='Dropdown-control']");
 
     String rentPeriod = ".//div[@class='Dropdown-option' and text()='%s']";
-
-//    private By color = By.xpath(".//input[text()='* Срок аренды']");
 
     String scooterColor = ".//label[text()='%s']";
 

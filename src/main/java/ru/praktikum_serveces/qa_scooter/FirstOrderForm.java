@@ -1,19 +1,13 @@
 package ru.praktikum_serveces.qa_scooter;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-import java.time.Duration;
+import org.openqa.selenium.WebElement;
 
 public class FirstOrderForm {
 
     private WebDriver driver;
-
-//    private String stationName;
 
     //локаторы
 
@@ -22,8 +16,6 @@ public class FirstOrderForm {
     private By lasttName = By.xpath(".//input[@placeholder = '* Фамилия']");
     private By adress = By.xpath(".//input[@placeholder = '* Адрес: куда привезти заказ']");
     private By metroStationSelect = By.xpath(".//input[@placeholder = '* Станция метро']");
-
-//    private By metroStationClick = By.xpath(".//div[text()='"+stationName+"']");
 
     String metroStationClick = ".//div[text()='%s']";
 
@@ -59,6 +51,11 @@ public class FirstOrderForm {
         driver.findElement(metroStationSelect).click();
     }
 
+    public void scrollToStation  (String station) {
+        WebElement element = driver.findElement(createStationLocator(station));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+    }
+
 
     public void selectMetroStation (String stationName) {
         driver.findElement(createStationLocator(stationName)).click();
@@ -83,6 +80,7 @@ public class FirstOrderForm {
         enterLastName(textSurname);
         enterAdress(textAdress);
         setMetroStation();
+        scrollToStation(stationName);
         selectMetroStation(stationName);
         enterPhoneNumber(phone);
         clickNextButton();

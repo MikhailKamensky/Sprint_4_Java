@@ -11,10 +11,6 @@ import static org.junit.Assert.assertTrue;
 
 public class OrderButtonsTest {
 
-//    @Rule
-//    public final BrowserRules browserRule = new BrowserRules();
-
-
     private WebDriver driver;
 
     @Before
@@ -44,11 +40,7 @@ public class OrderButtonsTest {
 
         ScooterHomePage objHomePage = new ScooterHomePage(driver);
         FirstOrderForm objFirstOrderPage = new FirstOrderForm(driver);
-
-//        WebElement button = driver.findElement(By.className("Home_FinishButton__1_cWm"));
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", button);
         objHomePage.scrollTOBigOrderButton();
-
         objHomePage.clickBigOrderButton();
         assertTrue(objFirstOrderPage.isOrderFormDisplayed());
     }

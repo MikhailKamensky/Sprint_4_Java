@@ -63,32 +63,7 @@ public class OrderFormTest {
 
         objFirstOrderPage.fillFirstOrderForm(firstName, lastName, adress, station, phoneNumber);
 
-
-        //тестирование первой формы вводы
-//        objFirstOrderPage.enterFirstName(firstName);
-//        objFirstOrderPage.enterLastName(lastName);
-//        objFirstOrderPage.enterAdress(adress);
-//        objFirstOrderPage.setMetroStation();
-//
-//        WebElement element = driver.findElement(objFirstOrderPage.createStationLocator(station));
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
-//
-//        objFirstOrderPage.selectMetroStation(station);
-//        objFirstOrderPage.enterPhoneNumber(phoneNumber);
-//        objFirstOrderPage.clickNextButton();
-
-
         objSecondOrderPage.fillSecondOrderForm(date, period, color, courierCommentText);
-
-//        objSecondOrderPage.clickPeriodField();
-//        objSecondOrderPage.setDate(date);
-//        objSecondOrderPage.setRentPeriod(period);
-//        objSecondOrderPage.setColor(color);
-//        objSecondOrderPage.setComment(courierCommentText);
-//        objSecondOrderPage.clickOrderButton();
-//        objSecondOrderPage.clickConfirmButton();
-
-
 
         assertTrue(objSecondOrderPage.isOrderConfirmed());
     }
