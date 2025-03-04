@@ -77,4 +77,14 @@ public class SecondOrderForm {
         return driver.findElement(orderInfo).isDisplayed();
     }
 
+    public void fillSecondOrderForm(String date, String period, String color, String courierCommentText){
+        clickPeriodField();
+        setDate(date);
+        setRentPeriod(period);
+        setColor(color);
+        setComment(courierCommentText);
+        clickOrderButton();
+        clickConfirmButton();
+    }
+
 }

@@ -34,27 +34,25 @@ public class FirstOrderForm {
         this.driver = driver;
     }
 
-    public void enterFirstName (String text) {
-        driver.findElement(firstName).sendKeys(text);
+    public void enterFirstName (String textName) {
+        driver.findElement(firstName).sendKeys(textName);
     }
 
-    public void enterLastName (String text) {
-        driver.findElement(lasttName).sendKeys(text);
+    public void enterLastName (String textSurname) {
+        driver.findElement(lasttName).sendKeys(textSurname);
     }
-
-
 
 
     // создаем локатор для клика по станции
-    private By createStationLocator(String stationName) {
+    public By createStationLocator(String stationName) {
         return By.xpath(
                 String.format
                         (metroStationClick, stationName));
     }
 
 
-    public void enterAdress (String text) {
-        driver.findElement(adress).sendKeys(text);
+    public void enterAdress (String textAdress) {
+        driver.findElement(adress).sendKeys(textAdress);
     }
 
     public void setMetroStation () {
@@ -79,6 +77,17 @@ public class FirstOrderForm {
         return driver.findElement(firstOrderPage).isDisplayed();
     }
 
+
+    public void fillFirstOrderForm (String textName, String textSurname, String textAdress, String stationName, String phone) {
+        enterFirstName(textName);
+        enterLastName(textSurname);
+        enterAdress(textAdress);
+        setMetroStation();
+        selectMetroStation(stationName);
+        enterPhoneNumber(phone);
+        clickNextButton();
+        isOrderFormDisplayed();
+    }
 
 }
 
